@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var n = [ 1, 2, 9, 5, 4, 8 ];
+	n.sort(); // 기본 오름차순
+	console.log(n);
+	
+	n.sort(function(a,b){return a-b;}); // a-b : 오름차순
+	console.log(n);
+	n.sort(function(a,b){return b-a;}); // b-a : 내림차순
+	console.log(n);
+	
+	var n3 = ["A", "B", "C"];
+	var n4 = n3.join("and"); // sperator 조인
+	console.log(n4);
+</script>
+</head>
+<body>
+
+</body>
+</html>

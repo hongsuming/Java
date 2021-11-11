@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".a").css("color", "red");
+		var test = $(".a");
+		console.log(test);
+		console.log(">>>>>", test[1]);
+		test[1].innerText = "내가 바꿨다.";
+		console.log($(test[1]));
+		$(test[1]).text("다시 바꿔");
+	})
+</script>
+</head>
+<body>
+	<p class="a">Hello</p>
+	<p class="a2">Hello2</p>
+	<div class="a">World</div>
+</body>
+</html>

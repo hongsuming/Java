@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".myClass").css("color", "red");
+		console.log("첫 번째 myClass", $(".myClass"));
+		console.log("첫 번째 myClass", $(".myClass").first().text());
+		console.log("두 번째 myClass", $(".myClass")[1].innerText);
+		console.log("세 번째 myClass", $(".myClass").last().text());
+	});
+</script>
+</head>
+<body>
+<p class="notMe">div class="notMe"</p>
+<p class="myClass">p class="myClass1"</p>
+<div class="myClass">div class="myClass2"</div>
+<div class="myClass">div class="myClass3"</div>
+</body>
+</html>

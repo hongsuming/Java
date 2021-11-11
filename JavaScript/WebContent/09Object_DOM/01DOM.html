@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Insert title here</title></head><body><p>Hello</p><a href="daum.net">다음</a>
+<script type="text/javascript">
+
+     //노드 접근
+     var doc = document.childNodes;   //현재 문서의 모든 자식들..doc에 저장
+ 
+	var html = doc[1];//자식노드들 중 1번 째 
+	console.log("html", html);
+	 var htmlChild = html.childNodes;//html태그의 자식들 head, body
+	var body = htmlChild[1];
+	console.log("body", body);
+	var a = body.firstChild.nextSibling;//p태그의 첫번째 형제에 접근 => a 
+	console.log("a",a);
+	 console.log(a.getAttribute("href"));//daum.net
+	a.setAttribute("href","http://www.google.co.kr"); //href=daum.net=> google.co.kr로 설정
+	
+	
+	
+	/* var p = body.firstChild;
+    
+        Node
+        - element node 1
+        - attribute node 2
+        - text node 3
+    */
+    /* console.log(p.nodeType , p.nodeName);
+    var v = p.firstChild;
+    console.log(v.nodeType , v.nodeName , v.nodeValue); */
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

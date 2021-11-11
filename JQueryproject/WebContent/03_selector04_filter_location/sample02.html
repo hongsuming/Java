@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 첫 번째 자식이 되는 ul 태그
+		var x = $("ul:first-child");
+		console.log(x.text());
+		
+		// ul의 자식 중 첫 번째 자식
+		var y = $("ul>:first-child");
+		console.log(y.text());
+		
+		// 마지막 자식이 되는 li 태그
+		var z = $("li:last-child");
+		console.log(z.text());
+	})
+</script>
+</head>
+<body>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>
+		<p>Hello</p>
+	</div>
+</body>
+</html>

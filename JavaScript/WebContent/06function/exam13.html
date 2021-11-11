@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function aaa(){
+		console.log("aaa 함수");
+	}
+	function bbb(){
+		console.log("bbb 함수");
+		return aaa; // aaa 함수 리턴
+	}
+	function ccc(){
+		return function(n1, n2){
+			return n1+n2;
+		}
+	}
+	
+	var x = bbb(); // 리턴 값으로 함수를 받음 x = aaa함수
+	console.log(x);
+	x(); // aaa 함수 호출
+	
+	var y = ccc();				// 함수 호출 y = function(n1, n2) {  return n1+ n2;  } 리턴함수 저장 
+	console.log(y);
+	console.log(y(10, 20));
+</script>
+</head>
+<body>
+
+</body>
+</html>

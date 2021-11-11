@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById("allCheck").addEventListener("click", check, false);
+		document.querySelector("#test").addEventListener("click", view, false); 
+	};
+	function view(){
+		//var fruits = document.querySelectorAll(".fruits");
+		var fruits= document.querySelectorAll(".fruits:checked");
+		console.log(fruits);
+		var result = "";
+		for(var i =0; i<fruits.length; i++){
+			var fu="";
+			//if(fruits[i].checked){
+				result += fruits[i].value+"&nbsp;&nbsp;";
+			//}
+			console.log(result);
+			document.querySelector("#result").innerHTML = result;
+		}
+	};
+	function check(){
+/* 		var fruits = document.getElementsByClassName("fruits"); */
+		var fruits = document.querySelectorAll(".fruits"); // 여러 개의 태그 가져옴
+		for(var i=0; i<fruits.length; i++){
+			fruits[i].checked = this.checked; // this는 전체선택 체크 박스를 말함
+		}
+	}
+</script>
+</head>
+<body>
+	전체선택<input type="checkbox" name="allCheck" id="allCheck"><br>
+	<hr>
+	사과<input type="checkbox" name="fruits" class="fruits" value="사과"><br> 
+	수박<input type="checkbox" name="fruits" class="fruits" value="수박"><br> 
+	바나나<input type="checkbox" name="fruits" class="fruits" value="바나나"><br> 
+	오렌지<input type="checkbox" name="fruits" class="fruits" value="오렌지"><br>
+	<button id="test">확인</button><span id="result"> </span>
+</body>
+</html>

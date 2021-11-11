@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function (){
+		$("button").click(function (){
+			console.log($("#my").attr("checked"));
+			console.log($("#my").prop("checked"));
+		});
+	})
+</script>
+</head>
+<body>
+	A
+	<input id="my" type="checkbox" name="my" checked="checked">
+	<br> B
+	<input type="checkbox" name="my2">
+	<br>
+	<button>OK</button>
+</body>
+</html>

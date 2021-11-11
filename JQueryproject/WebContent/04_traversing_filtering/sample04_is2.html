@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var x = $("li").is(function (idx, ele){
+			console.log(ele); // 자바스크립트 객체
+			console.log(this); // 자바스크립트 객체
+			return ele.innerText=="A8";
+		});
+		
+		var fnx = $("li").is(function (idx, ele){
+			var fnele = $(ele); // 자바스크립트 객체 -> jQuery 객체로 전환
+			console.log(fnele);
+			return fnele.text()=="A8";
+		});
+		console.log(x);
+		console.log(fnx);
+	});
+</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+		<li>A1</li>
+		<li>A2</li>
+		<li class="my">A3</li>
+		<li>A4</li>
+		<li id="a">A5</li>
+		<li>A6</li>
+		<li>A7</li>
+		<li>A8</li>
+	</ul>
+</body>
+</html>

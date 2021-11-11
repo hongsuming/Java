@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		// 자식만 선택
+		$("div>a").css("color", "red");
+		// 자손 선택 (자식도 포함)
+		$("div a").css("font-size", "40px");
+	});
+</script>
+</head>
+<body>
+	<div>
+		<a href="#">daum</a><br>
+		<a href="#">naver</a>
+		<p>test</p>
+		<p>
+			<a href="">Google</a>
+		</p>
+	</div>
+</body>
+</html>

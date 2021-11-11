@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var x = $(":first"); // 태그 아무것도 설정 안 하고 first 뽑으면 html이 뽑힘
+		console.log(x);
+		
+		var y = $("ul:first");
+		console.log(y);
+		
+		var z = $(":last");
+		console.log(z);
+		console.log(z.text());
+		
+		var a = $("li:last");
+		console.log(a.text());
+	})
+</script>
+</head>
+<body>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>
+		<p>Hello</p>
+		<p>hello-end</p>
+	</div>
+	<div>hello-endenenenenenenen</div>
+</body>
+</html>

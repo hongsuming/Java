@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		$("input:text").val($("input:checked").val());
+		console.log($("input:checked"));
+	});
+</script>
+</head>
+<body>
+	사과
+	<input type="checkbox" checked="checked" value="사과">
+	<br> 배
+	<input type="checkbox" value="배">
+	<br> 바나나
+	<input type="checkbox" value="바나나">
+	<br>
+	<input type="radio" checked="checked" value="aaa">
+	<input type="text">
+</body>
+</html>

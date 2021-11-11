@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p>hello</p>
+	<div>
+		<div id="x">홍길동</div>
+	</div>
+	<a href="daum.net">다음</a><br>
+	이름:<input type="text" name="username" id="username" value="test"> <!-- name 속성은 서버에서 데이터 넘겨받을 때 사용 -->
+	
+	<script type="text/javascript">
+		function msg(){ // 함수
+			var n = document.getElementById("username");
+			console.log(n);
+			var s = n.value;
+			console.log(s);
+			s = n.value="aaaa"; // n.value로 접근해서 변경할 수 있음
+			console.log(s);
+		}
+		msg();
+	</script>
+</body>
+</html>

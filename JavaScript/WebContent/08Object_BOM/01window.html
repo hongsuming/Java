@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var child; // 자식 창 참조 - 전역변수
+	function yyy(){
+		child = window.open("01child.html", "childName", "width=200, height=300"); // window.open(열릴 파일, 창의 이름, 창의 크기)
+	}
+	function yyy2(){
+		child.close(); // child창 close
+	}
+	function yyy3(){
+		window.close();
+	}
+</script>
+</head>
+<body>
+여기는 부모창입니다.<br>
+<button onClick="yyy()">창 생성</button>
+<button onClick="yyy2()">자식 창 닫기</button>
+<button onClick="yyy3()">창 닫기</button>
+</body>
+</html>

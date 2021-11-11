@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	document.write(history.length+"<br>");
+	function back(){
+		history.back(); // 이전 페이지로 이동
+	}
+	function home(){
+		console.log(history.length);
+		history.go(-2);
+	}
+</script>
+</head>
+<body>
+현재 05history3.html 입니다.<br>
+<a href="javascript:back()">이전으로</a> <!-- 주소 대신 움직일 페이지를 처리할 함수 호출 시 -->
+<a href="javascript:home()">홈으로</a>
+</body>
+</html>

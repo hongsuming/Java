@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function aaa(num) {
+		console.log("aaa 함수" + num);
+	}
+	var xxx = aaa;
+	var y = aaa(10);
+	console.log(y);
+	xxx(100);
+	aaa(200);
+
+	var func = function(num) {
+		console.log("fun" + num);
+	}
+	func(300);
+	var test = func(10);
+	var test2 = func;
+	test2(100);
+
+	//변수에 new 이용 함수 생성 후 저장
+	var func5 = new Function("x", "y", "return x/y"); //매개변수, 매개변수, 함수본체코드
+	console.log(func5(200, 100));
+</script>
+</head>
+<body>
+
+</body>
+</html>

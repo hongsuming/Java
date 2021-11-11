@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+console.log("10"+20+30+40);//문자열 연결
+console.log(20+30+40+"10");//덧셈, 문자열연결
+
+console.log("10"+20);//자동변환 안 됨 1020
+console.log("20"-3);//자동형변환 후 계산 
+console.log("20"*3);//자동형변환 후 계산 
+console.log("20"/3); //6.66666666
+console.log("20"%3); //2
+
+var n = "10";
+var n2 = 20;
+console.log(parseInt(n)+n2); // 형 변환 후 계산
+console.log("n*n2==="+(n*n2)); // 자동으로 형 변환
+
+var s = parseInt("홍길동");
+console.log(s);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

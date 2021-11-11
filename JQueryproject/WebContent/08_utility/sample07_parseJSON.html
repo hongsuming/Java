@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function (){
+		var jsonString = '{"name" : "홍길동", "age" : 20, "address" : "서울"}'; // 작은 따옴표로 묶여있는 문자열 (키 값과 밸류로 접근 안 됨)
+		var jsonObj = $.parseJSON(jsonString); // parseJSON : 문자열을 json으로 변환
+		var name = jsonObj.name;
+		var age = jsonObj.age;
+		var address = jsonObj.address;
+		$("#result").append(name+"\t"+age+"\t"+address);
+		$("#result").append("<h1>"+name+"\t"+age+"\t"+address+"</h1>");
+	});
+</script>
+</head>
+<body>
+	<div id="result"></div>
+</body>
+</html>

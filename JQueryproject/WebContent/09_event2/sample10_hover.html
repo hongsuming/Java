@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function (){
+		$("li").hover(
+			function(){ // mouseEnter
+			$(this).append($("<span>***</span>"));
+		}, function(){ // mouseleaver
+			$(this).find("span").remove();
+		});
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li>홍길동</li>
+		<li>이순신</li>
+		<li class="fade">유관순</li>
+		<li class="fade">강감찬</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// focus 이벤트
+		$("#target").on("focus", function(){
+			$(this).css("background", "yellow");
+		});
+		// blur 이벤트
+		$("#target").on("blur", function(){
+			$(this).css("background", "");
+		});
+		// trigger(focus);
+		$("#other").on("click", function(){
+			$("#target").trigger("focus");
+		});
+		// trigger(blur);
+		$("#other2").on("click", function(){
+			$("#target").blur();
+		});
+		// 이벤트 제거
+		$("#other3").on("click", function(){
+			$("#target").off("blur focus");
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="target">
+	</form>
+	<button id="other">focus</button>
+	<button id="other2">blur</button>
+	<button id="other3">clear</button>
+</body>
+</html>

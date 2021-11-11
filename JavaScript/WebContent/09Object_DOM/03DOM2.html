@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = ["a.jpg","b.jpg","c.jpg","d.jpg","e.jpg","f.jpg","g.jpg","h.jpg","i.jpg"];
+
+	function change(n){
+		var imgs = document.getElementsByTagName("img");
+		var selectArr = "";
+		if(n==1){
+			selectArr = arr.slice(0,3);
+		}
+		if(n==2){
+			selectArr = arr.slice(3,6);
+		}
+		if(n==3){
+			selectArr = arr.slice(6, 9);
+		}
+		for(var x in imgs){
+			imgs[x].src = "../image/"+selectArr[x];
+		}
+	}
+</script>
+</head>
+<body>
+<table>
+ <tr>
+  <td><img src="../image/a.jpg" width="100" height="100" ></td>
+  <td><img src="../image/b.jpg" width="100" height="100" ></td>
+  <td><img src="../image/c.jpg" width="100" height="100" ></td>
+ </tr>
+</table>
+<a href="javascript:change(1)">1</a>
+<a href="javascript:change(2)">2</a>
+<a href="javascript:change(3)">3</a>
+</body>
+</html>

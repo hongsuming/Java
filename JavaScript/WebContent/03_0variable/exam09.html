@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var scope = "hello"; // 전역변수
+	
+	// 자바스크립트만의 특징
+	function f(){ 
+		document.write(scope+"<br>"); // undefined
+		var scope="test";
+		document.write(scope+"<br>"); // test - 지역변수 사용
+	}
+	document.write(scope+"<br>");
+	f();
+</script>
+</head>
+<body>
+
+</body>
+</html>

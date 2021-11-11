@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function aaa(){
+		console.log("aaa 호출됨");
+		return 100;
+	}
+	var x = aaa();
+	
+	var y = aaa;
+	console.log("y:", y);
+	var result = y();
+	console.log(result);
+</script>
+</head>
+<body>
+
+</body>
+</html>

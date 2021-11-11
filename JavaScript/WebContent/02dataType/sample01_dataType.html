@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var name="홍길동";
+	var age = 20;
+	var array = [1,2,3,4];
+	var obj = {"username":"이순신", "age":44};
+	var result = true;
+	var xxx;
+	var kkk = null;
+	var zzz = function(){};
+	
+	console.log(array);
+	console.log(obj);
+	
+	console.log(array[0]);
+	console.log("obj.username", obj.username, "obj.age", obj.age);
+	console.log("obj['username']", obj['username']);
+	
+	console.log(result);
+	console.log(xxx);
+	console.log(kkk);
+	console.log("function", zzz);
+	
+	
+	
+	var xyz = parseInt("123");
+	console.log(xyz+10);
+	
+	var xyz2 = parseInt("helo");
+	console.log(xyz2);
+	
+	name=200; // String -> number 데이터 변경 저장시 문제 없음
+	console.log(name);
+	console.log(age);
+	
+	// Json Object : 참조변수로 객체 참조(Key/Value를 쌍으로 데이터 저장, 숫자, 함수 저장 가능)
+	var foo={
+			"name":'sss',
+			"age":20
+	}
+	console.log(foo.name+"\t"+foo["name"]);
+	console.log(foo.age+"\t"+foo["age"]);
+	console.log(foo[0]+"\t"+foo[1]); // undefined Json객체는 배열처럼 index로 접근 안 됨
+	console.log(foo.address); // undefined
+</script>
+</head>
+<body>
+
+</body>
+</html>

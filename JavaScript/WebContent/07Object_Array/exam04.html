@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//1.[] 사용
+	var n2 = [ 10, 20, 9 ]; //배열생성
+	
+	n2.push(20);
+	console.log(n2);
+	n2.pop();
+	console.log(n2);
+	n2.pop();
+	console.log(n2);
+	
+	var n3 = [1,2,3,4,5];
+    n3.reverse();
+    console.log(n3);
+
+    var n4 = ["A","B","C",10,true,4.2];
+    var x = n4.indexOf("C");
+    console.log(x);
+    var x2= n4.slice(1,5);
+    console.log(x2);
+    
+    var n5 = ["A","B","C",10,true,4.2];
+    n5.splice(0,3); // 0부터 시작, 3개 삭제
+    console.log(n5);
+
+    var n6 = ["A","B","C",10,true,4.2];
+    n6.splice(0,1,100);
+    console.log("n6>>>>", n6);
+
+    var n7 = ["A","B","C",10,true,4.2];
+    n7.splice(0,0,100);
+    console.log(n7);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

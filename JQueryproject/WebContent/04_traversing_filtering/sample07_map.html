@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		var arr = $("li").map(function (idx, ele){
+			return $(this).text().toLowerCase();
+		});
+		console.log(arr);
+	})
+</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+		<li>A1</li>
+		<li>A2</li>
+		<li>A3
+			<ul>
+				<li>B1</li>
+				<li>B2</li>
+				<li>B3</li>
+			</ul>
+		</li>
+		<li>A4</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+		var s = [ "January", "February", "333333", "444444", "555555", "666666" ];
+		var arr = $.map(s, function(data, idx) {
+			console.log(data, idx);
+			return data.substring(0, 3);
+		})
+		console.log(arr.join(","));
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var aaa = function(){
+		console.log("aaa 호출");
+		return 100;
+	};
+	
+	var xxx1 = aaa;			// xxx1 = aaa 함수
+	var xxx2 = aaa();		// xxx2 = aaa 함수 호출 후 리턴 값 저장
+	console.log(xxx1());	// xxx1() = aaa()
+	console.log(xxx1);		// xxx1 = aaa 함수
+	console.log(xxx2);		// xxx2 = 저정 된 리턴 값 100
+	
+	
+	function kkk(x){
+		console.log("kkk 호출", x);
+		x();
+	}
+	var ppp = function(){
+		console.log("ppp 호출");
+	};
+	kkk(ppp);
+	
+	
+	function ttt(){
+		console.log("ttt 호출", eee);
+		return eee;
+	}
+	var eee = function(){
+		console.log("eee 호출");
+	};
+	var k = ttt();
+	k();
+</script>
+</head>
+<body>
+
+</body>
+</html>

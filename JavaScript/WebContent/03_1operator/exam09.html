@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//3항 연산자
+// (조건식)?값1:값2;
+
+var n = (4>3)?100:200;
+console.log(n);
+
+var n2 = (4>3)?"aa":"bb";
+console.log(n2);
+///////////////////////////////////////
+var x = 4;
+var x2 = 3;
+var n3 = (x>x2)?"aa":"bb";
+console.log(n3);
+
+var n4 = (x>x2 && x==x2)?"aa":"bb";
+console.log(n4);
+
+console.log("'123'||10", "123"||10);
+console.log(0||10); // 0->false, 우 리턴
+
+console.log("'123'&&10", "123"&&10);
+console.log(0&&10); //0
+
+function test(a){
+	var arr = a || [];
+	console.log(arr);
+}
+test();
+test([1,2]);
+
+var aaa2 = ( 4>3)? alert(100):alert(200);
+console.log(aaa2);    //undefined  
+var aaa3 = ("aaa")? "AA":"BB";
+console.log(aaa3); //AA
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

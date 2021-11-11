@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// type="button"
+		$("input:button").css("border", "3px red solid");
+
+		// id가 disable에 click 이벤트 달아줌
+		$("#disable").click(function() {
+			// input type이 text인 form의 속성이 enabled인 요소의 enabled 속성을 삭제
+			$("input[type='text']:enabled").removeAttr("enabled");
+			$("input[type='text']:enabled").attr("disabled", "disabled");
+		}); // click end
+		// id가 enable에 click 이벤트 달아줌
+		$("#enable").click(function() {
+			// input type이 text인 form의 속성이 disabled인 요소의 disabled 속성을 삭제
+			$("input[type='text']:disabled").removeAttr("disabled");
+			$("input[type='text']:disabled").attr("enabled", "enabled");
+		}); // click end
+	});
+</script>
+</head>
+<body>
+	<input type="text" id="first">
+	<input type="text" id="second" disabled="disabled">
+	<input type="button" value="enable" id="enable">
+	<button id="disable">disable</button>
+</body>
+</html>

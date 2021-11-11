@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var name="홍길동";
+	var age = 20;
+	var array = [1,2,3,4];
+	var obj = {"username":"이순신", "age":44};
+	var result = true;
+	var xxx;
+	var kkk = null;
+	var zzz = function(){};
+	var xyz = parseInt("123");
+	
+	console.log( typeof name ); // 'string'
+    console.log( typeof age );   // number
+    console.log( typeof array ); // object
+    console.log( typeof obj );    // object
+    console.log( typeof result );  //boolean
+    console.log( typeof xxx );      // undefined
+    console.log( typeof kkk );       // object ( null )
+    console.log( typeof zzz );      // function
+    console.log( typeof xyz );      // number
+	
+    console.log( typeof obj == 'object');    // object
+    console.log( typeof result == 'boolean');  //boolean
+    console.log( typeof xxx == 'undefined');      // undefined
+    console.log( typeof kkk == 'object');       // object ( null )
+    console.log("null", typeof kkk == 'null');       // object ( null ) false
+    console.log( typeof zzz == 'function' );      // function
+    console.log( typeof xyz == 'number');      // number
+    
+</script>
+</head>
+<body>
+
+</body>
+</html>

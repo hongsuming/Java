@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById("update").addEventListener("click", update);
+		document.getElementById("delete").addEventListener("click", del);
+		document.getElementById("sendForm").addEventListener("click", sendF);
+		document.getElementById("send").addEventListener("click", send);
+	}
+	
+	// event.preventDefault() 달아주면 페이지 이동 막힘
+	function update(){
+		var update = document.getElementById("myform");
+		update.action = "update.html";
+	}
+	function del(){
+		var del = document.getElementById("myform");
+		del.action = "delete.html";
+	}
+	function sendF(){
+		var send = document.getElementById("myform");
+		send.action = "send.html";
+	}
+	function test(){
+		event.preventDefault();
+		location.href = "send.html"; // 폼 안에 들어있어서 폼에 있는 액션으로 이동하게 됨 
+									// (event.preventDafault를 걸어줘서 폼 액션으로 넘어가는 걸 멈춤 데이터가 이동 안 됨)
+	}
+	function send(){
+		var myForm = document.getElementById("myform");
+		myForm.action = "send.html"; // 폼 바깥의 버튼은 페이지 이동이 안 됨
+		event.preventDefault();
+		myForm.submit();
+	}
+</script>
+</head>
+<body>
+	<form action = "target.html" id="myform">
+		아이디<input type="text" name="userid"><br>
+		비밀번호<input type="text" name="passwd"><br>
+		<input type="submit" value="전송"><br>
+		<button id="sendForm">전송2</button>
+		<button id="update">수정</button>
+		<button id="delete">삭제</button>
+		<button onclick="test()">버튼 inline방식</button>
+	</form>
+	
+	<hr>
+	폼의 바깥
+	<button id="send">전송</button>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = init;
+	
+	function test(){
+		console.log("clicked");
+	};
+	function init(){
+		console.log("모든 html이 모두 DOM으로 생성된후 실행");
+		
+		document.getElementById("xxx").onclick = test;
+		document.getElementById("xxx").onmouseover = function(){
+			console.log("onmouseover");
+		};
+		document.getElementById("xxx").onmouseout = function(){
+			console.log("onmouseout");
+		};
+		document.getElementById("userid").onkeyup = function(){
+			console.log(this.value);
+		};
+		document.getElementById("xyz").onclick = function(){
+			console.log(event, screenX, screenY);
+		};
+	}
+
+/* 	window.onload = function (){
+		console.log("모든 html이 모두 dom으로 생성된 후 실행");
+	}; */
+/* 	window.onload = init(); // 화면 로딩 완료시 동작할 함수를 만들어놓고 만든 함수를 등록
+	function init(){
+		console.log("모든 html이 모두 dom으로 생성된 후 실행");
+	}; */
+</script>
+</head>
+<body>
+<!-- 이벤트 처리 코드가 없음 -->
+ <button id="xxx">클릭</button>
+ <input type="text" name="userid" id="userid">
+  <button id="xyz">이벤트 정보</button>
+</body>
+</html>

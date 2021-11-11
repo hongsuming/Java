@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx(){
+		window.close(); // 현재 오픈 된 window 창 닫기 (자식 창)
+	}
+	function xxx2(){
+		opener.close(); // 나를 연 부모 창을 닫음
+	}
+</script>
+</head>
+<body>
+이 페이지는 자식 페이지 입니다.<br>
+<button onClick="xxx()">창 닫기</button> <!-- 버튼 클릭시 xxx() 함수 호출로 이벤트 처리(인라인 방식 이벤트 처리) -->
+<button onClick="xxx2()">부모 창 닫기</button>
+</body>
+</html>

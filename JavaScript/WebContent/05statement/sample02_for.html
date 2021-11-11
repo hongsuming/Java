@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+
+   //1. for문
+   
+	var num;
+	for (num = 0; num <= 10; num++) {
+		console.log("The for number is  " + num );
+	}
+
+	for ( var x = 0; x <= 10; x++) {
+		console.log("The for number is  " + x );
+	}
+	//주의할 점.
+	console.log( "x =>   " + x); // 변수는 함수기반 스코프
+	
+	
+	//2. while 문
+	
+	var num2 = 0;
+	while (num2 <= 10) {
+		console.log("The while number is  " + num2);
+		num2++;
+	}
+
+	//3. do ~ while 문
+
+	var num3 = 0;
+	do {
+		console.log("The do ~ while number is  " + num3);
+		num3++;
+	} while (num3 <= 10);
+	
+	
+
+	// forin을 이용한 배열
+	var myCars = ["BMW" , "Benz" , "티코"];
+
+	for (var num4 in myCars) {
+		console.log("myCars  " + myCars[num4]);
+	}
+	
+	// forin을 이용한 객체
+	var person = { name:"홍길동" ,  age:"20" , address:"서울"};
+	
+	for (var p in person) {
+		console.log("person 정보: " + p + " : " + person[p] );
+	}
+	
+	
+	
+     // break
+     for ( var x2 = 0; x2 <= 10; x2++) {
+    	if( x2 == 8) break;
+		console.log("The for number is  x2 = " + x2 );
+	 }
+	
+     // continue
+     for ( var x3 = 0; x3 <= 10; x3++) {
+    	if( x3%2 == 0) continue;
+		console.log("The for number is  x3 = " + x3 );
+	 }
+
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

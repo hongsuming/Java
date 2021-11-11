@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function (){
+		var s = ["A", "B", "C", "D", "E"];
+		for(var i=0; i<s.length; i++){
+			console.log(s[i]);
+		}
+		
+		$.each(s, function (idx, data){
+			console.log(idx,":", data);
+		});
+		
+		var s2 = {"one":100, "two":200, "three":300};
+		$.each(s2, function (key, data){ // json (key, value);
+			console.log(key, data);
+		});
+		
+		var s3 = ["A", "B", "C", "D", "E"];
+		$.each(s3, function (idx, data){
+			console.log(idx, data);
+			return data != "C"; // false인 경우 break;
+		});
+		
+		$(s3).each(function (idx, data){
+			console.log("$(s3)>>>", idx, data);
+			return data != "C";
+		});
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

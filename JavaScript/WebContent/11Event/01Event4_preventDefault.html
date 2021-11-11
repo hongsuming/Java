@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx(){
+		console.log("A");
+		alert("submit");
+		console.log("B");
+	}
+	function xxx2(){
+		var id = document.getElementsById("userid").value;
+		var pa = document.getElementsById("passwd").value;
+		var result = false;
+		if(id.length>=3 && pa.length!=0){ // id가 3자 이상 그리고 pw 입력된 경우
+			result = true;
+		} else{
+			result = false;
+			alert("똑바로 입력해주세요.");
+		}
+		return result;
+	}
+	function xxx3(e){
+		alert("xxx3 submit");
+		e.preventDefault(); // preventDefault() : action 금지 
+	}
+</script>
+</head>
+<body>
+<form action="target.html" onsubmit="xxx()"><!-- 인라인 방식 처리 submit이벤트 발생시  -->
+아이디======1<input type="text" name="userid"><br>
+비번=======1<input type="text" name="passwd"><br>
+<button>버튼</button><!--  xxx()호출 -->
+<input type="submit" value="로그인">
+<input type="reset" value="취소"><br>
+</form>
+<hr>
+<form action="target.html" onsubmit="return xxx2()"><!-- return : 함수 실행 중지  -->
+아이디======2<input type="text" id="userid"><br>
+비번=======2<input type="text" id="passwd"><br>
+<button>버튼</button><!--  xxx()호출 -->
+<input type="submit" value="로그인">
+<input type="reset" value="취소"><br>
+</form>
+<hr>
+<form action="target.html" onsubmit="xxx3(event)"><!-- 주의  인라인방식시 event를 매개변수로 넘김-->
+아이디=====3<input type="text" name="userid" ><br>
+비번======3<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인">
+<button>버튼</button>
+</form>
+</body>
+</html>

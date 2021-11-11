@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function (){
+		var s = ["A", "B", "C", "D"];
+		var arr = $.grep(s, function (data, idx){
+			console.log(data); // 2번째 매개변수가 인덱스
+			return data=="B";
+		}, false);
+		console.log(arr);
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

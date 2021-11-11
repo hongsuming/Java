@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#toggler").click(function (){
+			$("#red").toggle("slow");
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="toggler">toggle</button>
+
+	<div>
+		<span>이성계</span><span>이순신</span> <span>강감찬</span><span>윤봉길</span> <span>정몽주</span><span
+			id="red">위인들</span>
+	</div>
+</body>
+</html>

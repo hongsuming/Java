@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>hello</p>
+	<div>
+		<div id="x">홍길동</div>
+	</div>
+	<a href="daum.net">다음</a>
+	<br>
+	<div id="y">
+		<h1>이순신</h1>
+	</div>
+	
+	<script type="text/javascript">
+		var div = document.getElementById("x"); // id로 선택 하나의 태그(노드)선택
+		console.log(div);
+		var s = div.innerText; // div 태그 사이의 문자열 가져오기
+		console.log("innerText:", s);
+		console.log(s.length);
+		console.log(s.charAt(0));
+		var html = document.getElementById("y").innerHTML;
+		console.log(html);
+	</script>
+</body>
+</html>

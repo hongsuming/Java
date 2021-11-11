@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var j = $("#a");
+		console.log(j); // S.fn.init(1)
+		var j2 = document.getElementById("a");
+		console.log(j2); // <p id="a">Hello</p>
+		
+		// html 태그 : value, innerText, innerHTML, src, action 은 function 객체에서 사용 안 됨
+		// jQuery 객체 : .val(), .text(), .html(), .attr("src", "속성값"), attr("action", "속성값")로 접근해야 됨
+		
+ 		$("#a2").css("color", "red");
+ 		console.log($("#a2").innerText); // undefined fn객체는 text() 함수 사용  
+		console.log("text() : ", $("#a2").text()); // innerText 대신 text() 사용
+		
+		$("#a").text("내가 바꾼 거야");
+		
+		$("#a").innerText="이너텍스트로 바꾼다";
+		
+		$("#a2").css("color", "red");
+		$("#c").text("aaaaaaaaaaaaaaaaaa");
+	});
+</script>
+</head>
+<body>
+	<p id="a">Hello</p>
+	<p id="a2">Hello2</p>
+	<div id="b">World</div>
+	<span id="c">test</span>
+</body>
+</html>
