@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="JspWorkshop05_jsVersion">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="JspWorkshop05_jsVersion"/>
+        <property name="java-output-path" value="/JspWorkshop05_jsVersion/build/classes"/>
+    </wb-module>
+</project-modules>
