@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dept.DeptMapper">
+<select id="selectAll" resultType="com.dto.Dept">
+<![CDATA[
+	select*from dept where deptno < 90
+]]>
+</select>
+<select id="selectAll2" resultType="com.dto.Dept">
+	select*from dept where deptno &gt; 50
+</select>
+</mapper>
